@@ -17,11 +17,17 @@ class BooksApp extends React.Component {
     this.setState({books});
   }
 
+  updateBookShelf = async (book, shelf) => {
+    await BooksAPI.update(book, shelf);
+    book.shelf = shelf;
+    this.setState((state) => ({
+      books: state.books.filter((b) => b.id !== book.id).concat(book),
+    }));
+  };
 
   render() {
     return (
       <div className="app">
-
       <Route exact path="/" render={()=>(
         <div className="list-books">
         <Header />
@@ -29,6 +35,7 @@ class BooksApp extends React.Component {
         <Bookshelf
           bookshelfTitle="Currently Reading"
           bookshelfName="currentlyReading"
+          updateBookShelf={this.updateBookShelf}
           books={this.state.books}
          
         />
@@ -36,12 +43,14 @@ class BooksApp extends React.Component {
           bookshelfTitle="Want to Read"
           bookshelfName="wantToRead"
           books={this.state.books}
+          updateBookShelf={this.updateBookShelf}
       
         />
         <Bookshelf
           bookshelfTitle="Read"
           bookshelfName="read"
           books={this.state.books}
+          updateBookShelf={this.updateBookShelf}
         
         />
       </div>

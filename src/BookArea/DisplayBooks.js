@@ -10,11 +10,13 @@ import Book from "./Book";
         <ol className="books-grid">
         {bookslist
             .filter((book) => book.shelf === bookshelfName)
-            .map((book, index) => (
-                
+            .map((book, index) => ( 
               <li key={index}>
                 <Book
                   books={book}
+                  onUpdateBookShelf={(books, shelf) => {
+                    this.props.updateBookShelf(book, shelf);
+                  }}
                 />
               </li>
             ))}

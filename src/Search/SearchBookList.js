@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import Book from "../BookArea/Book";
 
 export default class SearchBookList extends Component {
@@ -26,6 +25,3 @@ export default class SearchBookList extends Component {
   }
 }
 
-SearchBookList.propTypes = {
-  books: PropTypes.array.isRequired,
-};

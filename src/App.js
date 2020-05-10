@@ -2,6 +2,7 @@ import React from 'react'
  import * as BooksAPI from './BooksAPI'
 import './App.css'
 import Header from "./Header";
+import SearchWindow from "./SearchWindow"
 import { Route } from "react-router-dom";
 
 class BooksApp extends React.Component {
@@ -16,6 +17,7 @@ class BooksApp extends React.Component {
       <Route exact path="/" render={()=>(
         <div className="list-books">
         <Header />
+        <SearchWindow/>
       </div>
       )}
       />

@@ -1,12 +1,14 @@
 {
   "name": "myreads-app",
+  "author": "johar batta",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-router-dom": "^5.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

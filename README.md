@@ -1,5 +1,5 @@
 # MyReads Project
-Udacity Nanodegree First Project | Johar Batta
+ Johar Batta | First Project ND
 
 Tech Stack Used- HTML,CSS,React Js
 

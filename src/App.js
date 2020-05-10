@@ -5,13 +5,12 @@ import Header from "./Header";
 import SearchWindow from "./SearchWindow"
 import Bookshelf from "./BookArea/Bookshelf"
 import { Route } from "react-router-dom";
-
+import SearchBook from "./Search/SearchBook"
 
 class BooksApp extends React.Component {
   state = {
     books: [],
   }
-
    async componentDidMount() {
     const books = await BooksAPI.getAll();
     this.setState({books});
@@ -58,6 +57,12 @@ class BooksApp extends React.Component {
       </div>
       )}
       />
+      <Route
+      path="/search"
+      render={() => (
+        <SearchBook books={this.state.books} updateBookShelf={this.updateBookShelf} />
+      )}
+    />
 
       </div>
     )

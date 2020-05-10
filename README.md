@@ -1,8 +1,7 @@
 # MyReads Project
-Udacity Nanodegree First Project | Johar Batta
+ Johar Batta | First Project ND
 
 To get started developing right away:
-
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
 

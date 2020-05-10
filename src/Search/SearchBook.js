@@ -31,6 +31,9 @@ export default class SearchBook extends Component {
         }
       });
     }
+    else{
+      this.setState({ result: [] });
+    }
   };
 
   render() {

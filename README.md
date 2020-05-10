@@ -1,10 +1,14 @@
 # MyReads Project
 Udacity Nanodegree First Project | Johar Batta
 
-To get started developing right away:
+Tech Stack Used- HTML,CSS,React Js
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+### Getting started
+
+To run the project just download zip file or clone the repository.
+All you a npm installed
+Then in command line hit 'npm install' it will resolve all the dependencies.
+Then 'npm start' and you are good to go.
 
 ## What You're Getting
 ```bash
